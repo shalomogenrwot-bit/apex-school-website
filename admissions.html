@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply to Excellence Academy. Learn about admission requirements, tuition fees, financial aid, and enrollment process.">
+    <title>Admissions - Excellence Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .process-steps { display: flex; justify-content: space-between; margin-top: 50px; position: relative; }
+        .process-steps:before { content: ''; position: absolute; top: 40px; left: 10%; right: 10%; height: 3px; background: var(--primary); }
+        .step { text-align: center; position: relative; z-index: 1; flex: 1; padding: 0 20px; }
+        .step-number { width: 80px; height: 80px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.5rem; font-weight: bold; border: 4px solid var(--white); box-shadow: 0 0 0 4px var(--primary); }
+        .step h4 { color: var(--primary); margin-bottom: 10px; }
+        .requirements-section { padding: 80px 0; background-color: var(--light-gray); }
+        .requirements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .requirement-card { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); }
+        .requirement-card h3 { color: var(--primary); margin-bottom: 15px; }
+        .requirement-card ul li { padding: 8px 0; padding-left: 20px; position: relative; }
+        .requirement-card ul li:before { content: "•"; color: var(--accent); position: absolute; left: 0; font-weight: bold; }
+        .tuition-section { padding: 80px 0; }
+        .tuition-table { width: 100%; border-collapse: collapse; margin-top: 30px; background: var(--white); box-shadow: var(--shadow); border-radius: var(--radius); overflow: hidden; }
+        .tuition-table th { background: var(--primary); color: var(--white); padding: 20px; text-align: center; }
+        .tuition-table td { padding: 15px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        .faq-section { padding: 80px 0; background-color: var(--light-gray); }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-top: 50px; }
+        .faq-item { background: var(--white); padding: 25px; border-radius: var(--radius); box-shadow: var(--shadow); border-left: 4px solid var(--accent); }
+        .faq-item h4 { color: var(--primary); margin-bottom: 10px; }
+        .apply-cta { padding: 80px 0; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%); color: var(--white); text-align: center; }
+        @media (max-width: 768px) { .process-steps { flex-direction: column; gap: 30px; } .process-steps:before { display: none; } .faq-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <span>+256 756694381</span>
+                    <span>info@apexschool.edu</span>
+                </div>
+                <div class="top-links">
+                    <a href="portal.html">Student Portal</a>
+                    <a href="portal.html">Parent Portal</a>
+                    <a href="apply.html">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><span class="logo-icon">🎓</span>Apex Nursery and Primary School</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html" class="active">Admissions</a></li>
+                <li><a href="events.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Admissions</h1>
+                <p>Join the Apex family</p>
+            </div>
+        </section>
+
+        <section style="padding: 80px 0;">
+            <div class="container">
+                <div class="section-header"><h2>Admission Process</h2></div>
+                <div class="process-steps">
+                    <div class="step"><div class="step-number">1</div><h4>Submit Application</h4><p>Complete online form</p></div>
+                    <div class="step"><div class="step-number">2</div><h4>Document Review</h4><p>Submit records</p></div>
+                    <div class="step"><div class="step-number">3</div><h4>Assessment</h4><p>Entrance exam</p></div>
+                    <div class="step"><div class="step-number">4</div><h4>Interview</h4><p>Family meeting</p></div>
+                    <div class="step"><div class="step-number">5</div><h4>Enrollment</h4><p>Welcome aboard!</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="requirements-section">
+            <div class="container">
+                <div class="section-header"><h2>Requirements</h2></div>
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <h3>📋 Required Documents</h3>
+                        <ul><li>Completed application form</li><li>Birth certificate</li><li>Previous school records</li><li>Immunization records</li><li>Recommendation letters</li></ul>
+                    </div>
+                    <div class="requirement-card">
+                        <h3>📝 Entrance Assessment</h3>
+                        <ul><li>Math test</li><li>Reading comprehension</li><li>Writing sample</li><li>Subject-specific tests (G6-12)</li></ul>
+                    </div>
+                    <div class="requirement-card">
+                        <h3>👨‍👩‍👧‍👦 Interview</h3>
+                        <ul><li>Student interview</li><li>Parent interview</li><li>School tour</li><li>Meet teachers</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tuition-section">
+            <div class="container">
+                <div class="section-header"><h2>Fees Structure 2025-2026</h2></div>
+                <table class="tuition-table">
+                    <thead><tr><th>Class</th><th>Fees</th><th>Requirements</th><th>Total</th></tr></thead>
+                    <tbody>
+                        <tr><td>k.1-k.3</td><td>shs.360,000</td><td>shs.40,000</td><td>shs.400000</td></tr>
+                        <tr><td>P.1-P.4</td><td>shs.400000</td><td>shs.60000</td><td>shs.460000</td></tr>
+                        <tr><td>P.5-P.7</td><td>shs.410000</td><td>shs.60000</td><td>shs.470000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header"><h2>FAQ</h2></div>
+                <div class="faq-grid">
+                    <div class="faq-item"><h4>When is the deadline?</h4><p>Priority: January 15. Regular: March 1.</p></div>
+                    <div class="faq-item"><h4>Is financial aid available?</h4><p>Yes! 30% of students receive aid.</p></div>
+                    <div class="faq-item"><h4>Average class size?</h4><p>18 students, 15:1 ratio.</p></div>
+                    <div class="faq-item"><h4>International students?</h4><p>Yes, with ESL support!</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="apply-cta">
+            <div class="container">
+                <h2>Ready to Apply?</h2>
+                <p>Begin your journey with Excellence Academy today</p>
+                <a href="apply.html" class="btn btn-primary" style="background: var(--primary); font-size: 1.2rem; padding: 15px 40px;">Start Application</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about"><h3> Apex Nursery and Primary School</h3><p>Quality education since 2015.</p></div>
+                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="about.html">About</a></li><li><a href="admissions.html">Admissions</a></li></ul></div>
+                <div class="footer-contact"><h4>Contact</h4><p>📞 +256 756694381</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Apex schools</p></div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

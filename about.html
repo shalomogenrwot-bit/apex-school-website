@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Apex Nursery and Primary School's 25-year history, mission, leadership team, and state-of-the-art facilities.">
+    <title>About Us - Apex Nursery and Primary School</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .mission-section { padding: 80px 0; 
+         background: linear-gradient(135deg, rgba(138, 138, 195, 0.85) 0%, rgba(118, 137, 195, 0.85) 50%, rgba(110, 110, 223, 0.85) 100%), url('pics/cam');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;}
+        .mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .mission-card { text-align: center; padding: 40px; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); transition: var(--transition); }
+        .mission-card:hover { transform: translateY(-5px); }
+        .mission-icon { font-size: 3rem; margin-bottom: 20px; }
+        .mission-card h3 { color: var(--primary); margin-bottom: 15px; }
+        .history-section { padding: 80px 0; background-color: var(--light-gray); }
+        .history-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .history-text h2 { color: var(--primary); font-size: 2rem; margin-bottom: 20px; }
+        .team-section { padding: 80px 0; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .team-card { text-align: center; background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); transition: var(--transition); }
+        .team-card:hover { transform: translateY(-5px); }
+        .team-photo { width: 120px; height: 120px; background: #e8eaf6; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .team-card h4 { color: var(--primary); margin-bottom: 5px; }
+        .team-card .role { color: var(--accent); margin-bottom: 10px; font-weight: 600; }
+        .facilities-section { padding: 80px 0; background-color: var(--light-gray); }
+        .facilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .facility-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+        .facility-image { height: 200px; background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .facility-info { padding: 20px; }
+        .facility-info h4 { color: var(--primary); margin-bottom: 10px; }
+        @media (max-width: 768px) { .history-content { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <span> +256 756694381</span>
+                    <span> info@apexschools.edu</span>
+                </div>
+                <div class="top-links">
+                    <a href="portal.html">Student Portal</a>
+                    <a href="portal.html">Parent Portal</a>
+                    <a href="apply.html">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><span class="logo-icon">🎓</span>Apex nursery and primary school</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>About Apex Nursery and Primary School</h1>
+                <p>Discover our story, mission, and commitment to education</p>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Mission & Values</h2>
+                    <p>What drives us every day</p>
+                </div>
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon"></div>
+                        <h3>Our Mission</h3>
+                        <p>To provide an exceptional education that empowers students to become critical thinkers, lifelong learners, and responsible global citizens.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon"></div>
+                        <h3>Our Vision</h3>
+                        <p>To be a leading educational institution recognized for academic excellence, innovation, and character development.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon"></div>
+                        
+                        <h3>Our Values</h3>
+                        <p>Integrity, Respect, Excellence, Innovation, Diversity, and Community form the foundation of everything we do.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <div class="container">
+                <div class="history-content">
+                    <div class="history-text">
+                        <h2>Our History</h2>
+                        <p>Apex Nursery and Primary School was founded in 2015 by Mr. Oburu, a visionary educator who believed in the power of holistic education. Starting with just 50 students and 5 teachers in a small building, we have grown into one of the most respected educational institutions in the region.</p>
+                        <p style="margin-top: 15px;">Over the past 15 years, we have expanded our campus to include state-of-the-art facilities, developed comprehensive academic programs, and built a community of over 1,200 students and 120 dedicated faculty members.</p>
+                    </div>
+                    <div class="history-image">
+                        <div class="image-placeholder">
+                            <img src="pics/apexf.jpg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Leadership Team</h2>
+                    <p>Meet the dedicated professionals guiding our school</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="pics/yeah.jpg"/>
+                        </div>
+                        <h4>Mr. Oburu</h4>
+                        <p class="role">Founder & Head of School</p>
+                        <p>40+ years in education, Ph.D. in Educational Leadership</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="pics/eight.jpg"/>
+                        </div>
+                        <h4>Ms. Oburu Zerophah</h4>
+                        <p class="role">Principal</p>
+                        <p>25+ years experience in school administration</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <img src="pics/six.jpg"/>
+                        </div>
+                        <h4>Mr. Okoth Brian</h4>
+                        <p class="role">Headteacher</p>
+                        <p>20+ years in curriculum development</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-photo">
+                            
+                        <img src="pics/campiagn.jpg"/>
+                        </div>
+                        <h4>Mr. pehko Derick </h4>
+                        <p class="role">Academic Director</p>
+                        <p>Ph.D. in STEM Education, 15+ years experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="facilities-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Facilities</h2>
+                    <p>State-of-the-art infrastructure for holistic development</p>
+                </div>
+                <div class="facilities-grid">
+                    <div class="facility-card"><div class="facility-image">
+                        <img src="pics/one.jpg"/>
+                    </div><div class="facility-info"><h4>Science Labs</h4><p>Fully equipped laboratories for Physics, Chemistry, and Biology</p></div></div>
+                    <div class="facility-card"><div class="facility-image">
+                        <img src="pics/campiagn.jpg"/>
+                    </div><div class="facility-info"><h4>Computer Labs</h4><p>Modern computer labs with latest technology and software</p></div></div>
+                    <div class="facility-card"><div class="facility-image">
+                        <img src="pics/kid.jpg"/>
+                    </div><div class="facility-info"><h4>Library</h4><p>Extensive collection of books, digital resources, and study spaces</p></div></div>
+                    <div class="facility-card"><div class="facility-image">
+                        <img src="pics/aruu.jpg"/>
+                    </div><div class="facility-info"><h4>Sports Complex</h4><p>Indoor gymnasium, outdoor fields, and swimming pool</p></div></div>
+                    <div class="facility-card"><div class="facility-image">
+                        <img src="pics/tour.jpg"/>
+                    </div><div class="facility-info"><h4>Arts Center</h4><p>Dedicated spaces for visual arts, music, and performing arts</p></div></div>
+                    <div class="facility-card"><div class="facility-image">
+                        <img src="pics/apexb.jpg"/>
+                    </div><div class="facility-info"><h4>Auditorium</h4><p>500-seat auditorium for performances, assemblies, and events</p></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>🎓 Excellence Academy</h3>
+                    <p>Committed to providing quality education and shaping future leaders since 1999.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="events.html">Calendar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="portal.html">Student Portal</a></li>
+                        <li><a href="portal.html">Parent Portal</a></li>
+                        <li><a href="#">School Policies</a></li>
+                        <li><a href="#">Lunch Menu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>📞 +1 (555) 987-6543</p>
+                    <p>✉️ info@excellenceacademy.edu</p>
+                    <p>📍 456 Education Lane, Learning City, ST 12345</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Excellence Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+        });
+    </script>
+</body>
+</html>

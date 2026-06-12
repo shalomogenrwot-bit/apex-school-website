@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to Excellence Academy's student, parent, or staff portal to access grades, assignments, and school resources.">
+    <title>Portal Login - Excellence Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .portal-container { width: 100%; max-width: 450px; padding: 20px; }
+        .portal-card { background: var(--white); border-radius: 20px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .portal-header { text-align: center; margin-bottom: 30px; }
+        .portal-header .logo { font-size: 3rem; margin-bottom: 10px; }
+        .portal-header h2 { color: var(--primary); font-size: 1.8rem; }
+        .portal-header p { color: var(--dark-gray); }
+        .portal-tabs { display: flex; margin-bottom: 30px; background: var(--light-gray); border-radius: 10px; padding: 5px; }
+        .portal-tab { flex: 1; padding: 12px; text-align: center; border: none; background: transparent; cursor: pointer; font-size: 1rem; font-weight: 600; color: var(--dark-gray); border-radius: 8px; transition: var(--transition); }
+        .portal-tab.active { background: var(--primary); color: var(--white); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text); font-weight: 500; }
+        .form-group input { width: 100%; padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; }
+        .form-group input:focus { outline: none; border-color: var(--primary); }
+        .remember-forgot { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; font-size: 0.9rem; }
+        .remember-me { display: flex; align-items: center; gap: 8px; }
+        .forgot-password { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .forgot-password:hover { text-decoration: underline; }
+        .btn-login { width: 100%; padding: 14px; background: var(--primary); color: var(--white); border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+        .btn-login:hover { background: var(--primary-light); }
+        .portal-help { text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--dark-gray); }
+        .portal-help a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .back-link { text-align: center; margin-top: 20px; }
+        .back-link a { color: var(--white); text-decoration: none; font-size: 0.9rem; opacity: 0.8; transition: var(--transition); }
+        .back-link a:hover { opacity: 1; }
+        .features-list { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; }
+        .features-list h4 { color: var(--primary); margin-bottom: 15px; }
+        .features-list ul li { padding: 8px 0; padding-left: 25px; position: relative; color: #555; font-size: 0.9rem; }
+        .features-list ul li:before { content: "✓"; color: var(--success); position: absolute; left: 0; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="portal-container">
+        <div class="portal-card">
+            <div class="portal-header">
+                <div class="logo">🎓</div>
+                <h2>School Portal</h2>
+                <p>Excellence Academy</p>
+            </div>
+            
+            <div class="portal-tabs">
+                <button class="portal-tab active">Student</button>
+                <button class="portal-tab">Parent</button>
+                <button class="portal-tab">Staff</button>
+            </div>
+            
+            <form>
+                <div class="form-group">
+                    <label>Username or Email</label>
+                    <input type="text" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="remember-forgot">
+                    <label class="remember-me"><input type="checkbox"> Remember me</label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn-login">Login to Portal</button>
+            </form>
+            
+            <div class="features-list">
+                <h4>Portal Features:</h4>
+                <ul>
+                    <li>View grades and assignments</li>
+                    <li>Access learning materials</li>
+                    <li>Communicate with teachers</li>
+                    <li>Track attendance records</li>
+                    <li>Pay fees online</li>
+                    <li>View school calendar</li>
+                </ul>
+            </div>
+            
+            <div class="portal-help">
+                <p>Need help? Contact <a href="contact.html">IT Support</a></p>
+                <p>First time user? <a href="#">Create Account</a></p>
+            </div>
+        </div>
+        <div class="back-link">
+            <a href="index.html">← Back to School Website</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.portal-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.portal-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Excellence Academy's comprehensive K-12 curriculum, special programs, and academic achievements.">
+    <title>Academics - Excellence Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grade-levels { margin-top: 50px; }
+        .grade-card { background: var(--white); border-radius: 15px; padding: 40px; margin-bottom: 40px; box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center; }
+        .grade-icon { font-size: 5rem; text-align: center; background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); border-radius: 15px; padding: 40px; }
+        .grade-info h2 { color: var(--primary); font-size: 2rem; margin-bottom: 15px; }
+        .grade-info .grades { color: var(--accent); font-weight: 600; margin-bottom: 15px; font-size: 1.1rem; }
+        .subjects-list { list-style: none; margin: 20px 0; }
+        .subjects-list li { padding: 8px 0; padding-left: 25px; position: relative; }
+        .subjects-list li:before { content: "📚"; position: absolute; left: 0; }
+        .programs-section { padding: 80px 0; background-color: var(--light-gray); }
+        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .special-program-card { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); border-top: 4px solid var(--accent); }
+        .special-program-card h3 { color: var(--primary); margin-bottom: 15px; }
+        .special-program-card ul { list-style: none; margin-top: 15px; }
+        .special-program-card ul li { padding: 5px 0; padding-left: 20px; position: relative; }
+        .special-program-card ul li:before { content: "✓"; color: var(--accent); position: absolute; left: 0; font-weight: bold; }
+        .achievements-section { padding: 80px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); }
+        .achievements-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; }
+        .achievement-card { text-align: center; padding: 30px; background: rgba(255,255,255,0.1); border-radius: var(--radius); backdrop-filter: blur(10px); }
+        .achievement-icon { font-size: 3rem; margin-bottom: 15px; }
+        .achievement-card h3 { margin-bottom: 10px; color: var(--accent); }
+        @media (max-width: 768px) { .grade-card { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <span>+256 756694381</span>
+                    <span> info@apexschools.edu</span>
+                </div>
+                <div class="top-links">
+                    <a href="portal.html">Student Portal</a>
+                    <a href="portal.html">Parent Portal</a>
+                    <a href="apply.html">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><span class="logo-icon"></span>Apex Nursery and Primary School</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html" class="active">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Academics</h1>
+                <p>Excellence in education at every level</p>
+            </div>
+        </section>
+
+        <section style="padding: 80px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Grade Levels</h2>
+                    <p>Comprehensive curriculum designed for each stage of development</p>
+                </div>
+                <div class="grade-levels">
+                    <div class="grade-card">
+                        <div class="grade-icon">
+                            <img src="pics/campiagn.jpg"/>
+                        </div>
+                       
+                        <div class="grade-info">
+                            <h2>Elementary School</h2>
+                            <p class="grades">Grades K-5 | Ages 5-11</p>
+                            <p>Our elementary program builds strong foundations in core subjects while nurturing curiosity and creativity.</p>
+                            <ul class="subjects-list">
+                                <li>English Language Arts</li><li>Mathematics</li><li>Science</li>
+                                <li>Social Studies</li><li>Art & Music</li><li>Physical Education</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grade-card">
+                        <div class="grade-icon">
+                            <img src="pics/one.jpg"/>
+                        </div>
+                        <div class="grade-info">
+                            <h2>Middle School</h2>
+                            <p class="grades">Grades 6-8 | Ages 11-14</p>
+                            <p>The middle school years are crucial for academic and personal growth with in-depth subject exploration.</p>
+                            <ul class="subjects-list">
+                                <li>Advanced Mathematics</li><li>Integrated Science</li><li>World History & Geography</li>
+                                <li>Literature & Composition</li><li>Foreign Languages</li><li>Technology & Coding</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grade-card">
+                        <div class="grade-icon">
+                            <img src="pics/campiagn.jpg"/>
+                        </div>
+                        <div class="grade-info">
+                            <h2>High School</h2>
+                            <p class="grades">Grades 9-12 | Ages 14-18</p>
+                            <p>Our college preparatory program offers rigorous academics with Advanced Placement options.</p>
+                            <ul class="subjects-list">
+                                <li>AP Calculus, Statistics</li><li>AP Biology, Chemistry, Physics</li>
+                                <li>AP English Literature</li><li>AP US History, Government</li>
+                                <li>Computer Science & Robotics</li><li>College & Career Counseling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="programs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Special Programs</h2>
+                    <p>Enriching opportunities beyond the core curriculum</p>
+                </div>
+                <div class="programs-grid">
+                    <div class="special-program-card">
+                        <h3>🚀 STEM Program</h3>
+                        <p>Advanced Science, Technology, Engineering, and Mathematics with hands-on projects.</p>
+                        <ul><li>Robotics Club</li><li>Science Olympiad</li><li>Math Competition Team</li></ul>
+                    </div>
+                    <div class="special-program-card">
+                        <h3>🎨 Arts Program</h3>
+                        <p>Comprehensive arts education including visual arts, music, theater, and dance.</p>
+                        <ul><li>School Band & Orchestra</li><li>Drama Productions</li><li>Art Exhibitions</li></ul>
+                    </div>
+                    <div class="special-program-card">
+                        <h3>🏅 Athletics</h3>
+                        <p>Competitive sports program promoting teamwork, discipline, and physical fitness.</p>
+                        <ul><li>Basketball</li><li>Soccer</li><li>Swimming</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: white;">Academic Achievements</h2>
+                </div>
+                <div class="achievements-grid">
+                    <div class="achievement-card"><div class="achievement-icon">🏆</div><h3>98%</h3><p>College Acceptance Rate</p></div>
+                    <div class="achievement-card"><div class="achievement-icon">📊</div><h3>Top 5%</h3><p>National Test Scores</p></div>
+                    <div class="achievement-card"><div class="achievement-icon">🎓</div><h3>85%</h3><p>AP Exam Pass Rate</p></div>
+                    <div class="achievement-card"><div class="achievement-icon">🏅</div><h3>50+</h3><p>Competitions Won</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about"><h3>🎓 Excellence Academy</h3><p>Committed to providing quality education since 1999.</p></div>
+                <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="about.html">About Us</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="academics.html">Academics</a></li></ul></div>
+                <div class="footer-links"><h4>Resources</h4><ul><li><a href="portal.html">Student Portal</a></li><li><a href="portal.html">Parent Portal</a></li></ul></div>
+                <div class="footer-contact"><h4>Contact Us</h4><p>📞 +1 (555) 987-6543</p><p>✉️ info@excellenceacademy.edu</p></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2024 Excellence Academy. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+        });
+    </script>
+</body>
+</html>
