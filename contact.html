@@ -183,10 +183,52 @@
     </footer>
 
     <script>
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+const API_URL = 'https://school-backend-production-8774.up.railway.app';
+
+document.querySelector('.contact-form-container form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // Combine first and last name to match backend's "name" field
+    const firstName = this.querySelector('input[placeholder="First name"]').value;
+    const lastName = this.querySelector('input[placeholder="Last name"]').value;
+    
+    const formData = {
+        name: firstName + ' ' + lastName,
+        email: this.querySelector('input[placeholder="your@email.com"]').value,
+        subject: this.querySelector('select').value,
+        message: this.querySelector('textarea').value
+    };
+    
+    const submitBtn = this.querySelector('.btn-submit');
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    try {
+        const response = await fetch(`${API_URL}/api/contact`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
         });
-    </script>
+        
+        if (response.ok) {
+            alert('✅ Message sent successfully!');
+            this.reset();
+        } else {
+            const error = await response.json();
+            alert('❌ Error: ' + (error.error || 'Failed to send'));
+        }
+    } catch (error) {
+        alert('❌ Cannot connect to server. Please try again later.');
+        console.error('Error:', error);
+    } finally {
+        submitBtn.textContent = 'Send Message';
+        submitBtn.disabled = false;
+    }
+});
+
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
+</script>
 </body>
 </html>
