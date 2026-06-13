@@ -232,10 +232,45 @@
     </footer>
 
     <script>
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+const API_URL = 'https://school-backend-production-8774.up.railway.app';
+
+// Newsletter form
+document.querySelector('.newsletter-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const email = this.querySelector('input[type="email"]').value;
+    const submitBtn = this.querySelector('button[type="submit"]');
+    
+    submitBtn.textContent = 'Subscribing...';
+    submitBtn.disabled = true;
+    
+    try {
+        const response = await fetch(`${API_URL}/api/newsletter/subscribe`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email })
         });
-    </script>
+        
+        if (response.ok) {
+            alert('✅ Subscribed successfully!');
+            this.reset();
+        } else {
+            const error = await response.json();
+            alert('❌ Error: ' + (error.error || 'Failed to subscribe'));
+        }
+    } catch (error) {
+        alert('❌ Cannot connect to server. Please try again later.');
+        console.error('Error:', error);
+    } finally {
+        submitBtn.textContent = 'Subscribe';
+        submitBtn.disabled = false;
+    }
+});
+
+// Mobile menu
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
+</script>
 </body>
 </html>
